@@ -1,0 +1,42 @@
+<div>
+    <h1 style="color:white ; text-align:center">{{aim}}</h1>
+</div>
+<div class="container border bg-success w-25 mt-5 p-3">
+    <h1 class="text-center text-white">LOGIN PAGE</h1>
+    <!-- Event binding using $event method -->
+    <!-- <div class="mt-2 p-3">
+        <input type="text" [placeholder]="acnt" (change)="acnoChange($event)" class="form-control">
+        </div>
+        <div class="mt-2 p-3">
+            <input type="text" [placeholder]="pswd" (change)="pswdChange($event)" class="form-control">
+            </div> -->
+    <!-- Event binding using template rendering method -->
+    <!-- <div class="mt-2 p-3">
+        <input type="text" [placeholder]="acnt" #acno class="form-control">
+    </div>
+    <div class="mt-2 p-3">
+        <input type="text" [placeholder]="pswd" #pswrd class="form-control"> -->
+    <!-- </div>
+    <div class="text-center mt-2 p-3">
+        <button (click)="login(acno,pswrd)" type="button" class="btn btn-danger">Login</button>
+    </div> -->
+    <!-- </div> -->
+    <!-- two way binding-form module -->
+    <form (ngSubmit)="login()">
+        <div class="mt-2 p-3">
+            <input name="acnum" type="text" [placeholder]="acnt" [(ngModel)]="acno" class="form-control">
+        </div>
+        <div class="mt-2 p-3">
+            <input name="psw" type="text" [placeholder]="pswd" [(ngModel)]="pswrd" class="form-control">
+            <div class="text-center mt-2 p-3">
+                <button type="submit" class="btn btn-danger">Login</button>
+            </div>
+
+            <div class="mt-2 p-3 text-center">
+                <p style="color:white ;">new user?<a style="color:white ; text-decoration:none" routerLink="register"
+                        href="">Register here</a>
+                </p>
+            </div>
+
+</div>
+</form>

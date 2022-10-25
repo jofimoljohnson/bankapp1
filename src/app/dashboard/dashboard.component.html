@@ -1,0 +1,60 @@
+<div class=" text-white mt-2 p-3">
+    <h1>WELCOME {{user}}!!</h1>
+    <div class="mt-1 p-3">
+        <a routerLink="/transcations" style="color:red ; background-color: bisque;">view transcation history</a>
+    </div>
+</div>
+<div class="container border bg-secondary mt-2 p-3 w-25 text-center" style="border-radius:60px ;">
+    <h1 class="text-center text-white">Deposit</h1>
+    <form (ngSubmit)="deposit()">
+        <div class="mt-2 p-3">
+            <input name="account number1" type="text" placeholder="enter account number" [(ngModel)]="acntnum1"
+                class="form-control" id="anum1">
+
+        </div>
+        <div class="mt-2 p-3">
+            <input name="password1" type="text" placeholder="enter password" [(ngModel)]="pswrd1" class="form-control"
+                id="psw1">
+
+        </div>
+        <div class="mt-2 p-3">
+            <input name="deposit" type="text" placeholder="amount to deposit" [(ngModel)]="amnt1" class="form-control"
+                id="dep">
+
+        </div>
+        <div class="mt-2 p-3">
+            <button type="submit" class="btn btn-success">Deposit</button>
+
+        </div>
+
+    </form>
+
+</div> <br>
+
+
+<div class="container border bg-secondary mt-2 p-3 w-25 text-center" style="border-radius: 60px;">
+    <h1 class="text-center text-white">Withdraw</h1>
+    <form (ngSubmit)="withdraw()">
+        <div class="mt-2 p-3">
+            <input name="account number2" type="text" placeholder="enter account number" [(ngModel)]="acntnum2"
+                class="form-control" id="anum2">
+
+        </div>
+        <div class="mt-2 p-3">
+            <input name="password2" type="text" placeholder="enter password" [(ngModel)]="pswrd2" class="form-control"
+                id="psw2">
+
+        </div>
+        <div class="mt-2 p-3">
+            <input name="withdraw" type="text" placeholder="amount to withdraw" [(ngModel)]="amnt2" class="form-control"
+                id="wdrw">
+
+        </div>
+        <div class="mt-2 p-3">
+            <button type="submit" class="btn btn-success">Withdraw</button>
+
+        </div>
+
+    </form>
+
+</div>
